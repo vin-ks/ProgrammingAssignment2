@@ -34,6 +34,7 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(MatrixInv)
         }
+        
         data <- x$get()
         MatrixInv <- solve(data, ...)
         x$setMatrixInv(MatrixInv)
